@@ -10,6 +10,8 @@ TEST(Example, EmptyTest) {
 
 #include <fstream>
 #include <functional>
+#include <vector>
+#include <string>
 
 namespace {
 struct TestCase {
@@ -18,7 +20,7 @@ struct TestCase {
   std::string find;
 };
 
-LoadTests(const std::string& filename, std::vector<TestCase>* out) {
+void LoadTests(const std::string& filename, std::vector<TestCase>* out) {
   std::ifstream fl(filename);
   if (!fl.is_open()) return;
 
@@ -29,7 +31,7 @@ LoadTests(const std::string& filename, std::vector<TestCase>* out) {
     fl >> test_case.input;
     fl >> test_case.find;
 
-    out->push_back(std::move(TestCase));
+    out->push_back(std::move(test_case));
   }
 }
 }  // namespace
