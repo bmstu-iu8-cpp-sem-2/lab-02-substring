@@ -27,7 +27,7 @@ void LoadTests(const std::string& filename, std::vector<TestCase>* out) {
     fl >> test_case.input;
     fl >> test_case.find;
 
-    out->push_back(std::move(TestCase));
+    out->push_back(std::move(test_case));
   }
 }
 }  // namespace
