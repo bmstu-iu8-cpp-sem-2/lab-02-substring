@@ -2,10 +2,6 @@
 
 #include <gtest/gtest.h>
 
-<<<<<<< HEAD
-TEST(Example, EmptyTest) {
-    EXPECT_TRUE(true);
-=======
 #include <substring.hpp>
 
 #include <fstream>
@@ -61,5 +57,4 @@ TEST(Substring, KMP) {
     EXPECT_EQ(test_case.found, kmp_find(test_case.input, test_case.find))
         << "find " << test_case.find << " in " << test_case.input;
   }
->>>>>>> prepared lab-02
 }
